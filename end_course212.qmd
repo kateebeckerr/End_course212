@@ -10,6 +10,80 @@ format:
 The End!!!
 
 ```{r}
+library(tidyverse)
+```
+
+# Some logical operators
+
+-   == (does this match),
+
+-   single = means this equals,
+
+-   != (do these not match? )
+
+-   \<,\>, \>=, \<=
+
+-   &, \|
+
+-   boolean = true or false
+
+```{r}
+#this is a question, does 4 match 5
+ 4 == 5
+```
+
+```{r}
+#does not 4 match 4
+4 == 4
+```
+
+```{r}
+#does 4 not match 5
+
+4 != 5
+```
+
+```{r}
+#does 4 match "4"
+4 == "4"
+
+#with assignment varabibles 
+cat <- 10
+dog <- 7
 
 ```
 
+```{r}
+cat > dog 
+
+```
+
+```{r}
+#is dog greater than cat or cat less than 20, vertical line is "or" one of these staments is true
+dog > cat | cat < 20
+```
+
+```{r}
+#is dog less than cat and is cat equal to 10
+dog < cat & cat == 10
+```
+
+```{r}
+dog > (0.5 *cat)
+```
+
+```{r}
+dog < cat & cat > 2 & 4 >= dog
+```
+
+```{r}
+mtcars
+```
+
+```{r}
+ggplot(data = mtcars, aes(x = wt, y = mpg)) +
+  geom_point(color = "red", aes(size = mpg, color = wt)) +
+  labs(x = "Car weight (1000 pounds)",
+       y = "Gas mileage (mpg)", 
+       title = "Car weight efficiency relationship")
+```
